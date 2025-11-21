@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import PolicyDoc,Video,Poster,Card
+from . models import Employee
+
 
 # Register your models here.
-admin.site.register(PolicyDoc)
-admin.site.register(Video)
-admin.site.register(Poster)
-admin.site.register(Card)
+class employeeAdmin(admin.ModelAdmin):
+    list_display = ('id_number','employee_image','name','id_image','gender','date','mobile_number')
+admin.site.register(Employee,employeeAdmin)

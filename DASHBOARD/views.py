@@ -1,36 +1,27 @@
 from django.shortcuts import render
-from .models import PolicyDoc,Video,Poster,Card
+from . models import Employee
 
 # Create your views here.
-def main(request):
-    return render(request,'DASHBOARD/main.html')
+def index(request):
+    return render(request,'DASHBOARD/index.html')
 
-def admin(request):
-    return render(request,'DASHBOARD/admin.html')
+def employee_dashboard(request):
+    return render(request,'DASHBOARD/employee-dashboard.html')
 
-def members(request):
-    return render(request,'DASHBOARD/members.html')
-
-def archives(request):
-    video = Video.objects.all()
-    post = Poster.objects.all()
-    card = Card.objects.all()
-    return render(request,'DASHBOARD/archives.html',{
-        'video':video,
-        'post':post,
-        'card':card
+def employee(request):
+    employees = Employee.objects.all()
+    return render(request,'DASHBOARD/employee.html',{
+        'employees':employees
     })
 
-def library(request):
-    return render(request,'DASHBOARD/library.html')
-
-def content_calender(request):
-    return render(request,'DASHBOARD/members.html')
-
-def policy_document(request):
-    policyDoc = PolicyDoc.objects.all()
-    return render(request,'DASHBOARD/policy_document.html',{
-        'policy':policyDoc
+def employee_details(request,id):
+    details =  Employee.objects.all(id=id)
+    return render(request,'DASHBOARD/employee-details.html',{
+        'details':details
     })
 
+def add_employee(request):
+    return render(request,'DASHBOARD/add-employee.html')
 
+def edit_employee(request):
+    return render(request,'DASHBOARD/edit-employee.html')

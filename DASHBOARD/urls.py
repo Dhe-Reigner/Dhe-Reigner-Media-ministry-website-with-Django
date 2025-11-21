@@ -1,12 +1,11 @@
 from django.urls import path
-from .import views
+from . import views
 
 urlpatterns = [
-    path('main/',views.main,name='DASHBOARD/main'),
-    path('admin/',views.admin,name='DASHBOARD/admin'),
-    path('members/',views.members,name='DASHBOARD/members'),
-    path('library/',views.library,name='DASHBOARD/library'),
-    path('archives/',views.archives,name='DASHBOARD/archives'),
-    path('content_calender/',views.content_calender,name='DASHBOARD/content_calender'),
-    path('policy_document/',views.policy_document,name='DASHBOARD/policy_document'),
+    path('index/',views.index,name='DASHBOARD/index'),
+    path('employee-dashboard/',views.employee_dashboard,name='DASHBOARD/employee-dashboard'),
+    path('employee/',views.employee,name='DASHBOARD/employee'),
+    path('add-employee/',views.add_employee,name='DASHBOARD/add-employee'),
+    path('edit-employee/',views.edit_employee,name='DASHBOARD/edit-employee'),
+    path('employee-details/<str:id>',views.employee_details,name='DASHBOARD/employee-details'),
 ]

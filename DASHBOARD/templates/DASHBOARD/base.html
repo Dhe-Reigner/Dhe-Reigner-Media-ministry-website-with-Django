@@ -140,7 +140,7 @@
                         <a href="#"><i class="fas fa-user-graduate"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
                         <ul>
                            <li><a href="{% url 'index' %}" class="active">Admin Dashboard</a></li>
-                           <li><a href="{% url 'employee-dashboard' %}">Employee Dashboard</a></li>
+                           <li><a href="{% url 'DASHBOARD/employee-dashboard' %}">Employee Dashboard</a></li>
                            <li><a href="student-dashboard.html">Student Dashboard</a></li>
                         </ul>
                      </li>
@@ -154,12 +154,12 @@
                         </ul>
                      </li>
                      <li class="submenu">
-                        <a href="#"><i class="fas fa-chalkboard-employee"></i> <span> employees</span> <span class="menu-arrow"></span></a>
+                        <a href="#"><i class="fas fa-users"></i> <span> employees</span> <span class="menu-arrow"></span></a>
                         <ul>
-                           <li><a href="{% url 'employees' %}">Employee List</a></li>
-                           <li><a href="{% url 'employee-details' %}">Employee View</a></li>
-                           <li><a href="{% url 'add-employee' %}">Employee Add</a></li>
-                           <li><a href="{% url 'edit-employee' %}">Employee Edit</a></li>
+                           <li><a href="{% url 'DASHBOARD/employee' %}">Employee List</a></li>
+                           <li><a href="{% url 'DASHBOARD/employee-details' employee.id %}">Employee View</a></li>
+                           <li><a href="{% url 'DASHBOARD/add-employee' %}">Employee Add</a></li>
+                           <li><a href="{% url 'DASHBOARD/edit-employee' %}">Employee Edit</a></li>
                         </ul>
                      </li>
                      <li class="submenu">
