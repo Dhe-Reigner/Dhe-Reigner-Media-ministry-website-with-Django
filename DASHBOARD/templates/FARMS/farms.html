@@ -1,0 +1,22 @@
+{% extends 'DASHBOARD/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="col-12 col-md-6 col-lg-4 d-flex">
+    {% for farm in farms %}
+<div class="card flex-fill">
+<img alt="Card Image" src="{{ farm.farm_image.url }} " class="card-img-top">
+<div class="card-header">
+<h5 class="card-title mb-0">{{ farm.name }} </h5>
+</div>
+<div class="card-body">
+<p class="card-text">{{ farm.description }} </p>
+<a class="btn btn-primary" href="#">More Details</a>
+</div>
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}

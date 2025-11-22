@@ -3,9 +3,11 @@ from . import views
 
 urlpatterns = [
     path('index/',views.index,name='DASHBOARD/index'),
-    path('employee-dashboard/',views.employee_dashboard,name='DASHBOARD/employee-dashboard'),
-    path('employee/',views.employee,name='DASHBOARD/employee'),
-    path('add-employee/',views.add_employee,name='DASHBOARD/add-employee'),
-    path('edit-employee/',views.edit_employee,name='DASHBOARD/edit-employee'),
-    path('employee-details/<str:id>',views.employee_details,name='DASHBOARD/employee-details'),
+    path('employee-dashboard/',views.employee_dashboard,name='EMPLOYEES/employee-dashboard'),
+    path('employee/',views.employee,name='EMPLOYEES/employee'),
+    path('add-employee/',views.add_employee,name='EMPLOYEES/add-employee'),
+    path('edit-employee/',views.edit_employee,name='EMPLOYEES/edit-employee'),
+    path('employee-details/<int:id_number>',views.employee_details,name='EMPLOYEES/employee-details'),
+    path('departments/',views.departments,name='DEPARTMENTS/departments'),
+    path('farms/',views.farms,name='FARMS/farms')
 ]

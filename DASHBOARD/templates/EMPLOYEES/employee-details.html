@@ -12,7 +12,7 @@
 <div class="col-sm-12">
 <h3 class="page-title">Employee Details</h3>
 <ul class="breadcrumb">
-<li class="breadcrumb-item"><a href="{% url 'DASHBOARD/employee' %}">Employee</a></li>
+<li class="breadcrumb-item"><a href="{% url 'EMPLOYEES/employee' %}">Employee</a></li>
 <li class="breadcrumb-item active">Employee Details</li>
 </ul>
 </div>
@@ -25,7 +25,7 @@
 <div class="about-info">
 <h4>About Me</h4>
 <div class="media mt-3">
-    {% for detail in details %}
+    
 <img src="{% static 'assets/img/user.jpg' %}" class="mr-3" alt="...">
 <div class="media-body">
 <ul>
