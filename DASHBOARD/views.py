@@ -37,3 +37,6 @@ def farms(request):
     return render(request,'FARMS/farms.html',{
         'farms':farms
     })
+
+def farm_details(request):
+    return render(request,'FARMS/farm-details.html')
