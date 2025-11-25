@@ -25,42 +25,35 @@
 
 <div class="row">
 <div class="col-sm-12">
-    {% if employees %}
+    {% if farm-details %}
 <div class="card card-table">
 <div class="card-body">
 <div class="table-responsive">
 <table class="table table-hover table-center mb-0 datatable">
 <thead>
 <tr>
-<th>ID</th>
+<th>Farm Number</th>
 <th>Photo</th>
 <th>Name</th>
-<th>ID Image</th>
-<th>Gender</th>
-<th>Date</th>
-<th>Mobile Number</th>
-<th>Assignment</th>
+<th>Description</th>
 <th class="text-right">Action</th>
 </tr>
 </thead>
 <tbody>
-    {% for employee in employees %}
+    
 <tr>
-<td>{{ employee.id_number }} </td>
+<td>{{ farm_details.farm_number }} </td>
 <td>
 <h2 class="table-avatar">
-<a href="{% url 'EMPLOYEES/employee-details' employee.id_number %}" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="{{ employee.employee_image.url }} " alt=""></a>
+<a href="{% url 'FARMS/farm-details' farm_details.farm_number %}" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="{{ farm_details.farm_image.url }} " alt=""></a>
 </h2>
 </td>
-<td><a href="{% url 'EMPLOYEES/employee-details' employee.id_number %}">{{ employee.name }}</a></td>
-<td><img src="{{ employee.id_image.url }}" alt="" style="width:50px; height:50px; object-fit:cover;"></td>
-<td>{{ employee.gender }} </td>
-<td>{{ employee.date }} </td>
-<td>{{ employee.mobile_number }} </td>
-<td>{{ employee.assignment }} </td>
+<td><a href="{% url 'FARMS/farm-details' farm_details.farm_number %}">{{ farm_detail.name }}</a></td>
+<!-- <td><img src="{{ employee.id_image.url }}" alt="" style="width:50px; height:50px; object-fit:cover;"></td> -->
+<td>{{ farm_details.description }} </td>
 <td class="text-right">
 <div class="actions">
-<a href="{% url 'EMPLOYEES/edit-employee' %}" class="btn btn-sm bg-success-light mr-2">
+<a href="{% url 'FARMS/edit-farm' %}" class="btn btn-sm bg-success-light mr-2">
 <i class="fas fa-pen"></i>
 </a>
 <a href="#" class="btn btn-sm bg-danger-light">

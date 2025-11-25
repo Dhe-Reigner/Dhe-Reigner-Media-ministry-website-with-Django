@@ -19,7 +19,7 @@
 </div>
 <div class="card-body">
 <p class="card-text">{{ farm.description }} </p>
-<a class="btn btn-primary" href="#">More Details</a>
+<a class="btn btn-primary" href="{% url 'FARMS/farm-details' farm.farm_number %}">More Details</a>
 </div>
 </div>
 {% endfor %}

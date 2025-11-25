@@ -11,4 +11,5 @@ urlpatterns = [
     path('departments/',views.departments,name='DEPARTMENTS/departments'),
     path('farms/',views.farms,name='FARMS/farms'),
     path('farm-details/<int:farm_number>',views.farm_details,name='FARMS/farm-details'),
+    path('edit-farm/',views.edit_farm,name='FARMS/edit-farm')
 ]

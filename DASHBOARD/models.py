@@ -6,9 +6,9 @@ import datetime
 # Create your models here.
 class Employee(models.Model):
     id_number = models.IntegerField(primary_key=True)
-    employee_image = models.ImageField(upload_to='Employee_images/')
+    employee_image = models.ImageField(upload_to='Employee_images/',null=True,blank=True)
     name = models.CharField(max_length=100)
-    id_image = models.ImageField(upload_to='ID_images')
+    id_image = models.ImageField(upload_to='ID_images',null=True,blank=True)
     gender = models.CharField(max_length=10,choices=[('Male','Male'),('Female','Female')],null=True,blank=True)
     date = models.DateField(default=datetime.datetime.today)
     mobile_number = models.CharField(max_length=100)
